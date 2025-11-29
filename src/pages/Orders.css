@@ -1,0 +1,188 @@
+/* ==========================================================
+   CONTAINER GERAL — mesmo padrão de outras páginas
+========================================================== */
+.orders-page {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* ==========================================================
+   TÍTULO DA PÁGINA
+========================================================== */
+.orders-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.orders-title h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8em;
+  color: #fff;
+}
+
+.orders-title span {
+  color: #dcdcdc;
+  font-size: 0.95em;
+}
+
+/* ==========================================================
+   LISTA DE PEDIDOS
+========================================================== */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ==========================================================
+   CARD DE PEDIDO
+========================================================== */
+.order-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 16px;
+  color: #2c3e50;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+  transition: 0.25s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================
+   HEADER DO CARD
+========================================================== */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.10);
+}
+
+.order-header h3 {
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+
+.order-meta {
+  color: #7f8c8d;
+  font-size: 0.9em;
+}
+
+.order-status {
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+/* ==========================================================
+   DETALHES DO PEDIDO
+========================================================== */
+.order-details {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.order-items h4 {
+  font-size: 1.05em;
+  margin-bottom: 10px;
+}
+
+.items-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ITEM */
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  background: #f6f7f8;
+  padding: 12px 14px;
+  border-radius: 10px;
+}
+
+.item-name {
+  font-weight: 600;
+}
+
+.item-quantity {
+  font-size: 0.85em;
+  color: #777;
+}
+
+.item-price {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* TOTAIS */
+.order-totals {
+  margin-bottom: 12px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.payment-id {
+  background: #eef2ff;
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 0.8em;
+  font-family: monospace;
+}
+
+/* ==========================================================
+   FOOTER DO CARD
+========================================================== */
+.order-footer {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0,0,0,0.10);
+}
+
+.status-description {
+  color: #7f8c8d;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+/* ==========================================================
+   BOTÃO FINAL
+========================================================== */
+.orders-footer {
+  margin-top: 35px;
+  text-align: center;
+}
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+@media (max-width: 768px) {
+  .orders-page {
+    padding: 20px 15px 60px;
+  }
+
+  .order-card {
+    padding: 18px;
+  }
+
+  .orders-title h2 {
+    font-size: 1.5em;
+  }
+}

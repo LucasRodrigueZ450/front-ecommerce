@@ -1,0 +1,258 @@
+/************************************************************
+ * RESET GLOBAL
+ ************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh; /* ← CORREÇÃO MAIS IMPORTANTE */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 70%, #2c3e50 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #2c3e50;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/************************************************************
+ * CONTAINER BASE
+ ************************************************************/
+.page-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/************************************************************
+ * HEADER
+ ************************************************************/
+.main-header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  padding: 25px 0;
+  z-index: 50;
+  border-bottom: 3px solid #eaeaea;
+}
+
+.header-content {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.header-content h1 {
+  font-size: 2.4em;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.header-content p {
+  font-size: 1em;
+  color: #7f8c8d;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: 2px solid #3498db;
+  background: transparent;
+  color: #3498db;
+  cursor: pointer;
+  transition: 0.25s;
+  font-weight: 600;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  background: #3498db;
+  color: #fff;
+}
+
+/************************************************************
+ * PAGE HEADER (PADRÃO)
+ ************************************************************/
+.page-header {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.page-header h2 {
+  font-size: 1.9em;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/************************************************************
+ * GRID DE PRODUTOS
+ ************************************************************/
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/************************************************************
+ * CARD DE PRODUTO
+ ************************************************************/
+.product-card {
+  max-width: 330px;
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/************************************************************
+ * FORMULÁRIOS (LOGIN / REGISTER)
+ ************************************************************/
+.auth-page {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/************************************************************
+ * FOOTER — PADRÃO INTERNO
+ ************************************************************/
+.main-footer {
+  margin-top: auto;
+  padding: 35px 0;
+  background: rgba(0,0,0,0.25);
+  color: #fff;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.footer-col {
+  min-width: 220px;
+}
+
+.footer-title {
+  font-size: 1.4em;
+  margin-bottom: 8px;
+}
+
+.footer-tags span {
+  display: inline-block;
+  padding: 5px 10px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 8px;
+  margin-right: 6px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+.footer-copy {
+  font-size: 0.85em;
+  opacity: 0.9;
+}
+
+.footer-small {
+  font-size: 0.75em;
+  opacity: 0.7;
+}
+
+/************************************************************
+ * FOOTER — LOGIN E REGISTER
+ ************************************************************/
+.footer-login {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 10px 0 !important;
+}
+
+.footer-login .footer-grid {
+  display: none !important;
+}
+
+.footer-login .footer-bottom {
+  text-align: center !important;
+}
+
+.footer-login .footer-copy,
+.footer-login .footer-small {
+  color: #fff !important;
+  opacity: 0.85;
+}
+
+/************************************************************
+ * BOTÕES
+ ************************************************************/
+.btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52,152,219,0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #3498db;
+  color: #3498db;
+}
+
+.btn-outline:hover {
+  background: #3498db;
+  color: #fff;
+}

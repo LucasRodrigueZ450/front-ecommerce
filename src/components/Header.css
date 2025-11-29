@@ -1,0 +1,92 @@
+/* ============================
+   HEADER - GLASS / CLEAN UI
+============================ */
+
+.main-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 35px 20px 20px;
+  text-align: center;
+  border-bottom: 3px solid rgba(255,255,255,0.6);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.header-content h1 {
+  font-size: 2.4em;
+  font-weight: 800;
+  color: #2c3e50;
+}
+
+.header-content p {
+  color: #6b6b6b;
+  font-size: 1em;
+}
+
+/* ============================
+   NAV BUTTONS
+============================ */
+
+.main-nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-btn,
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 22px;
+  border-radius: 18px;
+
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+
+  border: 2px solid #3498db;
+  background: transparent;
+  color: #3498db;
+}
+
+.nav-btn:hover,
+.logout-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Ativo */
+.nav-btn.active {
+  background: #3498db;
+  color: white;
+  box-shadow: 0 4px 14px rgba(52,152,219,0.35);
+}
+
+/* Botão de sair */
+.logout-btn {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+.logout-btn:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+/* ============================
+   USER LABEL
+============================ */
+
+.user-label {
+  margin-top: 12px;
+  font-size: 15px;
+  color: #2c3e50;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
